@@ -1,0 +1,25 @@
+
+label{
+    font-weight: 500;
+    font-size: 20px;
+}
+input{
+    width: 350px;
+    height: 30px;
+    border-color: transparent;
+}
+button{
+    background-color: black;
+    color:white;
+    border-color:transparent;
+    width: 80px;
+    text-align: center;
+    margin-left: 20px;
+}
+.map{
+    height: 280px;
+    width: 400px;
+}
+.contact-content{
+    font-size: 18px;
+}

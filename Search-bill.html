@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
+        <title>
+            Wrench it
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c7702976cb.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+
+        table,th,td{
+            border: 2px solid white;
+            padding: 20px;
+        }
+        th{
+            background-color: black;
+        }
+        .w3-modal{
+            background-color: rgb(38, 41, 62);
+        }
+        .w3-closebtn{
+            padding: 10px;
+            text-align: right;
+        }
+        .w3-closebtn:hover{
+            border: 2px solid white;
+        }
+    </style>
+    <body style="background-color: rgb(100, 99, 100); color:white;" class="w3-container">
+        <div class="search-bill-section">
+            <div class="nav-section">
+                <nav class="nav-sec navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="logo1.jpg" alt="logo" class="body-logo">
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                          <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                          <a class="nav-link active" href="Search-bill.html" >Search Bill</a>
+                          <a class="nav-link" href="index.html" >Login</a>
+                          <a class="nav-link " href="Contact.html" tabindex="-1" aria-disabled="true" >Contact us</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+
+            <div class="p-5 ">
+                <div class="row ">
+                    <div class="col-8 pt-2">
+                        <h1>Enter the Bill details..</h1>
+                        <hr style="background-color: white; height: 1px;"/>
+                        <form class="pt-4">
+                            <label style="text-align: left;">Customer name</label>
+                            <div class="input-box">
+                                <input type="text" name="name" id="cname">
+                            </div>
+                            <label>Bill id</label>
+                            <div class="input-box">
+                                <input type="text" name="mobile" id="mobile">
+                            </div>
+                            <div class="pt-3">
+                                <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn">Submit</button>                            </div>
+                        </form>
+                    
+
+                        <div id="id01" class="w3-modal mt-4 pt-2">
+                            <div class="w3-modal-content">
+                              <header class="w3-container w3-teal"> 
+                                <span onclick="document.getElementById('id01').style.display='none'" 
+                                class="w3-closebtn">&times;</span>
+                              </header>
+                              <div class="w3-container p-2">
+                                <h1>Bill id 01</h1>
+                                  <table align="center" style="width:60%;">
+                                      <thead>
+                                          <th>Bill</th>
+                                          <th>Quantity</th>
+                                          <th>Unit price</th>
+                                          <th>Total</th>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>3</td>
+                                              <td>10</td>
+                                              <td>2</td>
+                                              <td>20</td>
+                                          </tr>
+                                          <tr>
+                                              <td>4</td>
+                                              <td>10</td>
+                                              <td>1</td>
+                                              <td>10</td>
+                                          </tr>
+                                          <tr>
+                                              <td>1</td>
+                                              <td>10</td>
+                                              <td>3</td>
+                                              <td>30</td>
+                                          </tr>
+                                          <tr>
+                                              <td>2</td>
+                                              <td>15</td>
+                                              <td>3</td>
+                                              <td>45</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <footer class="w3-container w3-teal">
+                                  <div style="text-align: center; padding-left: 350px; padding-top: 20px;">
+                                      <b>Total Price 105/-</b><br><br>
+                                      <button type="button">Print bill</button>
+                                  </div>
+                              </footer>
+                            </div>
+                          </div>
+
+
+                
+
+
+                        
+                </div>
+                
+                
+                    <div class="col-2 pt-5">
+                        <div class="bill-image pl-5">
+                            <img src="bill.jpg" alt="no-image" height="350px" width="450px">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>

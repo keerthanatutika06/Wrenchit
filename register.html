@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
+        <title>
+            Wrench it
+        </title>
+        <meta http-equiv="Cache-control" content="no-cache">
+        <link rel="stylesheet" href="homestyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c7702976cb.js" crossorigin="anonymous"></script>
+
+    <script>
+        function validateForm() {
+            let user = document.forms["myForm"]["uname"].value;
+            if (user == ""){
+                alert("User name must be filled");
+                return false;
+            }
+            let x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+            alert("Email must be filled out");
+            return false;
+            }
+            let y=  document.forms["myForm"]["pwd"].value;
+            let z=  document.forms["myForm"]["confirm-pwd"].value;
+            if(y==null||y=="")
+            {
+                alert("Password is required");
+                return false;
+            }
+            if(z=="")
+            {
+                alert("Please confirm the password");
+                return false;
+            }
+            if(y!=z){
+                alert("password is not matching to the previous one!! retry");
+                return false;
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <p>Welcome to <span><img src="logo1.jpg" alt="logo" class="body-logo"></span>Wrench it..</p>
+            </div>
+            <center>
+            <div class="register-section">
+                    <form name="myForm" action="register.php"  method="post">
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <center><h><u>Register</u></h1></center>
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <div class="label-names"><label>User name</label></div>
+                                <input type="text" name="uname" required placeholder="Enter your username">
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <div class="label-names"><label>email</label></div>
+                                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <div class="label-names"><label>Password</label></div>
+                                <input type="password" name="pwd"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password">
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <div class="label-names"><label>Confirm Password</label></div>
+                                <input type="password" name="confirm-pwd" required placeholder="Confirm your password">
+                            </div>
+                        </div>  
+                        <div class="row m-2 p-1">
+                            <div class="col-12">
+                                <center><button onclick="validateForm()" class="button">Register</button></center>
+                            </div>
+                        </div> 
+                        <div class="row m-2 p-1">
+                            <div class="col-12">
+                                <p style="font-size: 18px;">Alredy have an account?
+                                <a href="index.html" style="color:black;">Login</a></p>
+                            </div>
+                        </div>                
+                    </form>
+            </div>
+        </center>
+        </div>
+    </body>
+</html>

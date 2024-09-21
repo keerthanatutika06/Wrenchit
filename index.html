@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
+        <title>
+            Wrench it
+        </title>
+        <link rel="stylesheet" href="homestyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c7702976cb.js" crossorigin="anonymous"></script>
+
+        <script>
+            function validateForm() {
+            let x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+            alert("Email must be filled out");
+            return false;
+            }
+            let y=  document.forms["myForm"]["pwd"].value;
+            if(y==null||y=="")
+            {
+                alert("Password is required");
+                return false;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <p>Welcome to <span><img src="logo1.jpg" alt="logo" class="body-logo"></span>Wrench it..</p>
+            </div>
+            <center>
+            <div class="login-section">
+                    <form name="myForm" action="login.php"  method="post">
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <h1><u>Login</u></h1>
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email">
+                                <span class="icon"><i class="fa-lg fa-solid fa-envelope"></i></span>
+                            </div>
+                        </div>
+                        <div class="row m-2 p-2">
+                            <div class="col-12 input-box">
+                                <input type="password" name="pwd"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password">
+                                <span class="icon"><i class="fa-lg fa-solid fa-lock"></i></span>
+                            </div>
+                        </div>
+                        <div class="row m-2 p-1">
+                            <div class="col-6 remember-forget">
+                                <label><input type="checkbox" required>Remember me</label>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" style="color:black;">Forgot password?</a>
+                            </div>
+                        </div>   
+                        <div class="row m-2 p-1">
+                            <div class="col-12">
+                                <button onclick="validateForm()" class="button">Login</button>
+                            </div>
+                        </div> 
+                        <div class="row m-2 p-1">
+                            <div class="col-12">
+                                <p style="font-size: 18px;">Dont have an account
+                                <a href="register.html" style="color:black;">Register</a></p>
+                            </div>
+                        </div>                
+                    </form>
+            </div>
+        </center>
+        </div>
+    </body>
+</html>
